@@ -4,9 +4,9 @@ Moonwalk is a responsive navigation solution that aims to maximise real estate i
 
 ## Usage
 
-1. Place the moonwalk.css in the head of your document or, even better, import/copy it directly into your own styles.
+- Place the moonwalk.css in the head of your document or, even better, import/copy it directly into your own styles.
 
-2. The HTML structure is really simple and definitely nothing out of the ordinary.
+- The HTML structure is really simple and definitely nothing out of the ordinary.
 
 ```html
 <nav id="moonwalk" class="main-nav">
@@ -19,13 +19,13 @@ Moonwalk is a responsive navigation solution that aims to maximise real estate i
 </div>
 ```
 
-3. Link the script in bottom of your document, just above your scripts.
+- Link the script in bottom of your document, just above your scripts.
 
 ```html
 <script type="text/javascript" src="moonwalk.js"></script>
 ```
 
-4. When the page is loaded init the script.
+- When the page is loaded init the script.
 
 ```javascript
 MoonwalkNav.init();
