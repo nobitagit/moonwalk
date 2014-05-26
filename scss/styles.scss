@@ -1,0 +1,92 @@
+/* Welcome to Compass */
+
+@import "compass/css3";
+
+// Define here your color styles for the navbar.
+$nav-bg-color : #222;
+$nav-txt-color : #ccc;
+// Define here the widths/height of the navbar.
+$nav-width-closed : 40px; 
+$nav-width-open : 200px; 
+$nav-height-mobile : 25px;
+// Define here the timing of the on hover animation.
+// Tip: toy with different easings @ http://matthewlein.com/ceaser/
+$timing : 0.35s cubic-bezier(0.725, 0.625, 0.225, 1.265);
+
+// MAIN BREAKPOINTS
+$nav-breakpoint: 770px;
+
+// A custom mixin for fast reference of breakpoints.
+@mixin mq($viewport) {
+   @media only screen and (min-width: $viewport) { @content; }
+}
+// The very basic stylings of the menu.
+.page-content{
+	@include transform( translateX(0px) );
+
+	-ms-transition: -ms-transform $timing;
+	-moz-transition: -moz-transform $timing;
+	-webkit-transition: -webkit-transform $timing;
+	transition: transform $timing;
+
+	@include mq($nav-breakpoint){
+		margin-left: $nav-width-closed;		
+	}
+}
+.main-nav {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+
+	height: $nav-height-mobile;
+	overflow: hidden;
+
+	color: $nav-txt-color;
+	background: $nav-bg-color;
+
+	@include transition ( width $timing );
+
+	@include transform( translate(0, 0) );
+	/* avoid line break on lines with more than 1 word when closing the menu */
+	white-space: nowrap;
+
+	@include mq($nav-breakpoint){
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: $nav-width-closed;	
+	}
+}
+
+.nav-toggler{
+	display: block;
+	@include mq($nav-breakpoint){
+		display: none;
+	}
+}
+
+.nav-mobile-open{
+	.main-nav{
+		//max-height: 400px;
+		height: auto;
+		@include mq(nav-breakpoint){
+			//max-height: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.nav-moonwalk-full {
+	@include mq($nav-breakpoint){
+		.page-content{
+			@include transform( translateX( $nav-width-open - $nav-width-closed ) );
+		}
+		.main-nav{
+				width: 200px;			
+		}
+	}
+}

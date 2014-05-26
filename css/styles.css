@@ -1,0 +1,66 @@
+/* Welcome to Compass */
+.page-content {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+  -ms-transition: -ms-transform 0.35s cubic-bezier(0.725, 0.625, 0.225, 1.265);
+  -moz-transition: -moz-transform 0.35s cubic-bezier(0.725, 0.625, 0.225, 1.265);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.725, 0.625, 0.225, 1.265);
+  transition: transform 0.35s cubic-bezier(0.725, 0.625, 0.225, 1.265); }
+  @media only screen and (min-width: 770px) {
+    .page-content {
+      margin-left: 40px; } }
+
+.main-nav {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  height: 25px;
+  overflow: hidden;
+  color: #cccccc;
+  background: #222222;
+  -webkit-transition: width 0.35s cubic-bezier(0.725, 0.625, 0.225, 1.265);
+  -moz-transition: width 0.35s cubic-bezier(0.725, 0.625, 0.225, 1.265);
+  -o-transition: width 0.35s cubic-bezier(0.725, 0.625, 0.225, 1.265);
+  transition: width 0.35s cubic-bezier(0.725, 0.625, 0.225, 1.265);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  /* avoid line break on lines with more than 1 word when closing the menu */
+  white-space: nowrap; }
+  @media only screen and (min-width: 770px) {
+    .main-nav {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 40px; } }
+
+.nav-toggler {
+  display: block; }
+  @media only screen and (min-width: 770px) {
+    .nav-toggler {
+      display: none; } }
+
+.nav-mobile-open .main-nav {
+  height: auto; }
+  @media only screen and (min-width: nav-breakpoint) {
+    .nav-mobile-open .main-nav {
+      height: 100%; } }
+
+@media only screen and (min-width: 770px) {
+  .nav-moonwalk-full .page-content {
+    -webkit-transform: translateX(160px);
+    -moz-transform: translateX(160px);
+    -ms-transform: translateX(160px);
+    -o-transform: translateX(160px);
+    transform: translateX(160px); }
+  .nav-moonwalk-full .main-nav {
+    width: 200px; } }

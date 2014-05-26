@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700|Roboto+Slab:400,300,100' rel='stylesheet' type='text/css'>
+		<link href="demo_files/normalize/normalize.css" rel="stylesheet"/>
+		<link href="css/styles.css" rel="stylesheet"/>
+		<link href="demo_files/css/demo.css" rel="stylesheet"/>
+		<!--[if lt IE 9]>
+		   <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+		<![endif]-->
+		<title>Moonwalk</title>
+	</head>
+	<body class="class-to-keep">
+		<nav id="Moonwalk-nav" class="main-nav">
+			<ul class="navlist">
+				<li id="Moonwalk-toggle" class="nav-toggler icon-list">
+					Toggle menu
+				</li>
+				<li class="icon-house">
+					<a href="#"> Home </a>
+				</li>
+				<li class="icon-moon3">
+					<a href="#moonwalk-intro"> Moonwalk </a>
+				</li>
+				<li class="icon-code">
+					<a href="#usage"> Usage </a>
+				</li>
+				<li class="icon-tools">
+					<a href="#customise"> Customisation</a>
+				</li>
+				<li class="icon-pie">
+					<a href="#support"> Support </a>
+				</li>
+				<li class="icon-flow-branch">
+					<span class="notify">1</span>
+					<a href="#dld2">Fork & Share</a>
+				</li>
+				<li class="icon-search">
+					<input type="text" class="search-input">
+				</li>
+			</ul>
+		</nav>
+
+		<div class="page-content">
+			<header class="cf">
+				<h1>Moonwalk</h1>
+				<div class="bubble"><p>No library<br>dependencies</p></div>
+				<h2>A responsive, dependencies-free navigation solution.</h2>			
+			</header>
+			<section class="dld cf">
+				<a href="#" class="btn">
+					Download it
+				</a>
+				<a href="#" class="btn">
+					View Source
+				</a>
+			</section>
+			<section class="explanation txt" id="moonwalk-intro">
+				<article class="intro">
+					<p>
+						Moonwalk is a responsive navigation solution that aims to maximise real estate in webapps and websites. It's built to be fast to implement and easy to customise.
+					</p>					
+				</article>
+				<article class="usage" id="usage">
+					<h3>Usage</h3>
+					<p>
+						1. Place the <i>moonwalk.css</i> in the head of your document or, even better, import/copy it directly into your own styles.
+					</p>
+					<p>
+						2. The HTML structure is really simple and definitely nothing out of the ordinary.
+						<pre>&lt;nav id="<span class="code-id">moonwalk</span>" class="<span class="code-class">main-nav</span>"&gt;
+&nbsp;&lt;span id="<span class="code-id">toggle-nav</span>" class="<span class="code-class">nav-toggler</span>"&gt;
+&nbsp;toggle menu
+&nbsp;&lt;/span&gt;
+&lt;/nav&gt;
+
+&lt;div class="<span class="code-class">page-content</span>"&gt;
+&lt;/div&gt;</pre>
+					</p>
+					<p>
+						3. Link the script in bottom of your document, just above your scripts.
+						<pre>&lt;script type="text/javascript" src="moonwalk.js"&gt;&lt;/script&gt;</pre>
+					</p>
+					<p>
+						4. When the page is loaded init the script.
+						<pre>MoonwalkNav.init();</pre>
+					</p>
+				</article>
+				<article id="customise">
+					<h3>
+						Customising the styles
+					</h3>
+					<p>
+						 The styles come in two flavors, CSS and SCSS+Compass. Customising the basic styles if you're using a preprocessor is a breeze.
+					</p>
+					<p>
+						Variables are placed at the top of the SCSS document, where you can easily tweak the widths and the timing of the animations.
+					</p>
+				</article>
+				<article class="support" id="support">
+					<h3>Support</h3>
+					<p>
+						Moonwalk relies on <a href="http://caniuse.com/transforms2d">CSS tranforms</a> (IE9+) and <a href="http://caniuse.com/css-transitions">CSS transitions</a> (IE10+). Due to the nature of the core animations of this plugin it seemed reasonable to skip support for IE9 and below by default. For this reason the tiny script behind the scenes leverages addEventListner (IE9+) the <a href="http://caniuse.com/classlist">classList API(IE10+)</a>.
+					</p>
+					<!-- p>
+						If you need to support older browsers you can certainly and easily do so by using polyfills. Please refer to this table to
+
+						<table>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>IE8</td>
+									<td>IE9</td>
+								</tr>
+								<tr>
+								<tr>
+									<td>Polyfills</td>
+									<td>addEventListener & ClassList</td>
+									<td>ClassList</td>									
+								</tr>
+							</tbody>
+						</table>
+						Remember that you also need to make sure you include both html5shiv.js and respond.js in the head of your document.
+						If you don't need to support IE9 but you only target 	
+					</p-->
+
+				</article>
+			</section>
+			<section class="dld2 txt">
+				<h3>
+					Clone it. Fork it. Change it. Share it.
+				</h3>
+				<p>
+					Moonwalk is published under MIT license and hosted on Github as a public repo. You are free to use it as you please (and please use it!), change it and share the the results.
+				</p>
+				<p>
+					If you find any bugs please open an issue on Github.
+				</p>
+				<div class="btn-gr cf">
+					<a href="#" class="btn">
+						View the Repo
+					</a>
+				</div>
+			</section>
+			<footer>
+				<span class="icon-megaphone"></span>&nbsp;&nbsp;Published under MIT license. <br> 
+				<span class="icon-github"></span>&nbsp;&nbsp;View credits on <a href="https://github.com/nobitagit/moonwalk">Github</a>. <br>
+				<span class="icon-twitter"></span>&nbsp;&nbsp;Follow me on <a href="https://twitter.com/aureliari">Twitter</a>.
+			</footer>
+		</div>
+	<script type="text/javascript" src="moonwalk.js"></script>
+	<script>
+		MoonwalkNav.init();
+	</script>
+	</body>
+</html>
