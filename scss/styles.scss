@@ -81,6 +81,8 @@ $nav-breakpoint: 770px;
 }
 
 .nav-moonwalk-full {
+	/* avoid scrollbars on tablets when the navbar is open */ 
+	overflow-x: hidden;
 	@include mq($nav-breakpoint){
 		.page-content{
 			@include transform( translateX( $nav-width-open - $nav-width-closed ) );
