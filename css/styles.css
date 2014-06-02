@@ -1,4 +1,12 @@
 /* Welcome to Compass */
+html, body {
+  /* avoid scrollbars on tablets when the navbar is open */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%; }
+
 .page-content {
   -webkit-transform: translateX(0px);
   -moz-transform: translateX(0px);
@@ -51,19 +59,17 @@
 
 .nav-mobile-open .main-nav {
   height: auto; }
-  @media only screen and (min-width: nav-breakpoint) {
+  @media only screen and (min-width: 770px) {
     .nav-mobile-open .main-nav {
       height: 100%; } }
 
-.nav-moonwalk-full {
-  /* avoid scrollbars on tablets when the navbar is open */
-  overflow-x: hidden; }
-  @media only screen and (min-width: 770px) {
-    .nav-moonwalk-full .page-content {
-      -webkit-transform: translateX(160px);
-      -moz-transform: translateX(160px);
-      -ms-transform: translateX(160px);
-      -o-transform: translateX(160px);
-      transform: translateX(160px); }
-    .nav-moonwalk-full .main-nav {
-      width: 200px; } }
+@media only screen and (min-width: 770px) {
+  .nav-moonwalk-full .page-content {
+    -webkit-transform: translateX(160px);
+    -moz-transform: translateX(160px);
+    -ms-transform: translateX(160px);
+    -o-transform: translateX(160px);
+    transform: translateX(160px);
+    overflow-x: hidden; }
+  .nav-moonwalk-full .main-nav {
+    width: 200px; } }
