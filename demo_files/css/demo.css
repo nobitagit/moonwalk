@@ -162,6 +162,8 @@ footer{
 /* These styles are for this demo only: override them from the scss/less styles using the variables! */
 .main-nav{
 	background: #2E3331;
+}
+.nav-mobile-on .main-nav{
 	height: 65px;
 }
 .page-content{

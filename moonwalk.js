@@ -7,19 +7,36 @@
 		var nav = document.getElementById('Moonwalk-nav'),
 			 toggler = document.getElementById('Moonwalk-toggle'),
 			 cnt = document.getElementById('Moonwalk-cnt'),
-			 wideClass = 'nav-moonwalk-full',
-			 toggleClass = 'nav-mobile-open';
+			 openClass = 'nav-moonwalk-full',
+			 mobileOpenClass = 'nav-mobile-open',
+			 mobileActivatedClass = 'nav-mobile-on',
+			 mobileMenuOpen = true;
+
 		var init = function(){
+			// Close Mobile menu (if js is disabled the nav will still be visible)
+			_classController('add', mobileActivatedClass);
+			mobileMenuOpen = false;
 			// mouse events are easy to detect and they're directly sent
 			// to their relevant function.
-			addEvt(nav, 'mouseover', 'add', wideClass);
-			addEvt(nav, 'mouseleave', 'remove', wideClass);
-			addEvt(nav, 'click', 'toggle', toggleClass);
+			_addEvt(nav, 'mouseover', _openNav);
+			_addEvt(nav, 'mouseleave', _closeNav);
+			_addEvt(toggler, 'click', _toggleMobileNav);
 		},
-		addEvt = function(el, evt, action, classNm){
-				el.addEventListener(evt, classController.bind(null, action, classNm), false);				
+		_openNav = function(){
+			_classController('add', openClass);
 		},
-		classController = function(action, classNm){
+		_closeNav = function(){
+			_classController('remove', openClass);
+		},
+		_toggleMobileNav = function(){
+
+			_classController('toggle', mobileOpenClass);
+	
+		},
+		_addEvt = function(el, evt, callback){
+				el.addEventListener(evt, callback, false);				
+		},
+		_classController = function(action, classNm){
 			document.body.classList[action](classNm);
 		};
 

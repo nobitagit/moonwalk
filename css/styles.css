@@ -27,7 +27,6 @@ html, body {
   top: 0;
   width: 100%;
   z-index: 999;
-  height: 25px;
   overflow: hidden;
   color: #cccccc;
   background: #222222;
@@ -57,10 +56,16 @@ html, body {
     .nav-toggler {
       display: none; } }
 
-.nav-mobile-open .main-nav {
+.nav-mobile-on .main-nav {
+  height: 25px; }
+  @media only screen and (min-width: 770px) {
+    .nav-mobile-on .main-nav {
+      height: 100%; } }
+
+.main-nav, body.nav-mobile-open .main-nav {
   height: auto; }
   @media only screen and (min-width: 770px) {
-    .nav-mobile-open .main-nav {
+    .main-nav, body.nav-mobile-open .main-nav {
       height: 100%; } }
 
 @media only screen and (min-width: 770px) {

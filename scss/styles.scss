@@ -48,7 +48,6 @@ html, body{
 	width: 100%;
 	z-index: 999;
 
-	height: $nav-height-mobile;
 	overflow: hidden;
 
 	color: $nav-txt-color;
@@ -77,15 +76,23 @@ html, body{
 	}
 }
 
-.nav-mobile-open{
+.nav-mobile-on{
 	.main-nav{
-		//max-height: 400px;
-		height: auto;
+		height: $nav-height-mobile;
 		@include mq($nav-breakpoint){
 			//max-height: 100%;
 			height: 100%;
 		}
 	}
+}
+
+.main-nav, body.nav-mobile-open .main-nav{
+	//max-height: 400px;
+	height: auto;
+	@include mq($nav-breakpoint){
+		//max-height: 100%;
+		height: 100%;
+	}	
 }
 
 .nav-moonwalk-full {
