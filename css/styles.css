@@ -5,7 +5,9 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  height: 100%; }
+  height: 100%;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation; }
 
 .page-content {
   -webkit-transform: translateX(0px);
@@ -50,12 +52,6 @@ html, body {
       height: 100%;
       width: 40px; } }
 
-.nav-toggler {
-  display: block; }
-  @media only screen and (min-width: 770px) {
-    .nav-toggler {
-      display: none; } }
-
 .nav-mobile-on .main-nav {
   height: 25px; }
   @media only screen and (min-width: 770px) {
@@ -78,3 +74,9 @@ html, body {
     overflow-x: hidden; }
   .nav-moonwalk-full .main-nav {
     width: 200px; } }
+
+.nav-toggler {
+  display: block; }
+  @media only screen and (min-width: 770px) {
+    .nav-toggler {
+      display: none; } }

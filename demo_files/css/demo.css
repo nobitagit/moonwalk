@@ -277,6 +277,10 @@ footer{
 	}
 }
 
+.moonwalk-touch .nav-toggler{
+	display: block;
+}
+
 /* GH ribbon thanks to: https://github.com/simonwhitaker/github-fork-ribbon-css */
 /* Left will inherit from right (so we don't need to duplicate code) */
 .github-fork-ribbon {
