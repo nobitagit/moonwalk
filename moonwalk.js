@@ -16,11 +16,13 @@
 			 openClass = 'nav-moonwalk-full',
 			 mobileOpenClass = 'nav-mobile-open',
 			 mobileActivatedClass = 'nav-mobile-on',
+			 // Navbar is open at load time and closed via js.
+			 // This value is set to false at init time.
 			 open = true,
 			 i,
 			 // Defaults, overridable by the user
 			 settings = {
-			 	addTouchClass : false,
+			 	addTouchClass : true,
 			 	touchClass : 'moonwalk-touch'
 			 };
 
@@ -32,15 +34,13 @@
 			// Close Mobile menu (if js is disabled the nav will still be visible)
 			_classController('add', mobileActivatedClass);
 			open = false;
-
 			// It's useless and wasteful to track events if they're not supported
 			// so we try to add event listeners only when needed. 
-			if ( !Utils.isTouch) {
+			if ( !Utils.isTouch ){
 				// if touch is supported we're not interested in hover states, so we
 				// add listeners for mouse events only where they're needed
 				_addEvt(nav, 'mouseover', _openNav);
 				_addEvt(nav, 'mouseleave', _closeNav);
-				_addEvt(toggler, 'click', _toggleMobileNav);				
 			}
 			// listen to click/tap on toggler in any case
 			_addEvt(toggler, 'click', _toggleMobileNav);
@@ -72,7 +72,7 @@
 			}
 		},
 		_addEvt = function(el, evt, callback){
-			el.addEventListener(evt, callback, false);				
+				el.addEventListener(evt, callback, false);				
 		},
 		_classController = function(action, classNm){
 			document.body.classList[action](classNm);
