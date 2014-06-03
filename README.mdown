@@ -30,3 +30,14 @@ Moonwalk is a responsive navigation solution that aims to maximise real estate i
 ```javascript
 MoonwalkNav.init();
 ```
+
+## Touch screen support
+
+The navbar relies on hover intent to work on larger screens, but a bigger screen does not necessarily mean we're NOT on a touch device, where hover state is not a viable option.
+To keep usability the plugin checks for touch support at load time. 
+
+If touch is supported you can opt to add a class at the body and show a toggler the user can tap to operate the navbar. If touch is not supported the default behavior takes place.
+
+
+
+
