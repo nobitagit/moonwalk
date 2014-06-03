@@ -17,7 +17,7 @@
 
 		<nav id="Moonwalk-nav" class="main-nav">
 			<ul class="navlist">
-				<li id="Moonwalk-toggle" class="nav-toggler icon-list">
+				<li id="Moonwalk-toggle" class="nav-toggler icon-list2">
 					Toggle menu
 				</li>
 				<li class="icon-house">
@@ -35,6 +35,9 @@
 				<li class="icon-pie">
 					<a href="#support"> Support </a>
 				</li>
+				<li class="icon-mobile">
+					<a href="#touch">Mobile & Touch</a>
+				</li>
 				<li class="icon-flow-branch">
 					<span class="notify">1</span>
 					<a href="#dld2">Fork & Share</a>
@@ -46,7 +49,7 @@
 		</nav>
 	   <div class="github-fork-ribbon-wrapper right-bottom">
 	      <div class="github-fork-ribbon">
-	          <a href="https://github.com/simonwhitaker/github-fork-ribbon-css">Fork me on GitHub</a>
+	          <a href="https://github.com/nobitagit/moonwalk">Fork me on GitHub</a>
 	      </div>
 	    </div>
 		<div id="Moonwalk-cnt" class="page-content">
@@ -56,10 +59,10 @@
 				<h2>A responsive, dependencies-free navigation solution.</h2>			
 			</header>
 			<section class="dld cf">
-				<a href="#" class="btn">
+				<a href="https://github.com/nobitagit/moonwalk/archive/master.zip" class="btn">
 					Download it
 				</a>
-				<a href="#" class="btn">
+				<a href="https://github.com/nobitagit/moonwalk" class="btn">
 					View Source
 				</a>
 			</section>
@@ -108,17 +111,17 @@
 				<article class="support" id="support">
 					<h3>Support</h3>
 					<p>
-						Moonwalk relies on <a href="http://caniuse.com/transforms2d">CSS tranforms</a> (IE9+) and <a href="http://caniuse.com/css-transitions">CSS transitions</a> (IE10+). Due to the nature of the core animations of this plugin it seemed reasonable to skip support for IE9 and below by default. For this reason the tiny script behind the scenes leverages addEventListner (IE9+) the <a href="http://caniuse.com/classlist">classList API(IE10+)</a>.
+						Moonwalk relies on <a href="http://caniuse.com/transforms2d">CSS tranforms</a> (IE9+) and <a href="http://caniuse.com/css-transitions">CSS transitions</a> (IE10+). Due to the nature of the core animations of this plugin it seemed reasonable to skip support for IE9 and below by default and aim for a lighter scripting. For this reason the js behind the scenes leverages addEventListner (IE9+) the <a href="http://caniuse.com/classlist">classList API(IE10+)</a>.
 					</p>
-					<!-- p>
-						If you need to support older browsers you can certainly and easily do so by using polyfills. Please refer to this table to
-
+					<p>
+						Please note that the behavior on legacy browser is currently untested, so if you need to support them the best way is probably by using polyfills. Although no animation will take place the menu will still be usable. Please refer to this table:
+					</p>
 						<table>
 							<tbody>
 								<tr>
-									<td></td>
-									<td>IE8</td>
-									<td>IE9</td>
+									<td>Supported browsers</td>
+									<td>IE8+</td>
+									<td>IE9+</td>
 								</tr>
 								<tr>
 								<tr>
@@ -128,10 +131,22 @@
 								</tr>
 							</tbody>
 						</table>
+					<p>
 						Remember that you also need to make sure you include both html5shiv.js and respond.js in the head of your document.
-						If you don't need to support IE9 but you only target 	
-					</p-->
-
+					</p>
+				</article>
+				<article id="touch">
+					<h3>Mobiles & touch</h3>
+					<p>
+						The navbar relies on hover intent to work on larger screens, but a bigger screen does not necessarily mean we're NOT on a touch device, where hover state is not a viable option.
+						To keep usability the plugin checks for touch support at load time. 
+					</p>
+					<p>
+						If touch is supported you can opt to add a class at the body and show a toggler the user can tap to operate the navbar. If touch is not supported the default behavior takes place.
+					</p>
+					<p>
+						On smaller screens the menu is the usual togglable navbar at the top of the screen.
+					</p>
 				</article>
 			</section>
 			<section class="dld2 txt">
@@ -145,7 +160,7 @@
 					If you find any bugs please open an issue on Github.
 				</p>
 				<div class="btn-gr cf">
-					<a href="#" class="btn">
+					<a href="https://github.com/nobitagit/moonwalk" class="btn">
 						View the Repo
 					</a>
 				</div>

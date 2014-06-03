@@ -50,6 +50,15 @@ pre{
 	padding: 35px;
 	text-align: left;
 }
+table{
+	width: 100%;
+	border: 2px solid #199472;
+	margin-bottom: 25px;
+}
+table td{
+	border: 1px solid #199472;
+	padding: 14px;
+}
 .code-class{
 	color: #4C3368;
 }
@@ -117,9 +126,12 @@ li a {
 li:hover{
 	color: #F3F3F3;
 }
+li:before{
+	transition: text-shadow 0.3s;
+}
 li:hover:before{
 	color: #F3F3F3;
-	text-shadow: 0 0 3px #1BA881;
+	text-shadow: 0 0 5px #1BA881;
 }
 .search-input{
 	background: #3A3F3D;
@@ -423,11 +435,11 @@ footer{
 */
 @font-face {
 	font-family: 'icomoon';
-	src:url('../icons/font/icomoon.eot?-97dpsc');
-	src:url('../icons/font/icomoon.eot?#iefix-97dpsc') format('embedded-opentype'),
-		url('../icons/font/icomoon.woff?-97dpsc') format('woff'),
-		url('../icons/font/icomoon.ttf?-97dpsc') format('truetype'),
-		url('../icons/font/icomoon.svg?-97dpsc#icomoon') format('svg');
+	src:url('../icons/font/icomoon.eot?-6bcdk');
+	src:url('../icons/font/icomoon.eot?#iefix-6bcdk') format('embedded-opentype'),
+		url('../icons/font/icomoon.woff?-6bcdk') format('woff'),
+		url('../icons/font/icomoon.ttf?-6bcdk') format('truetype'),
+		url('../icons/font/icomoon.svg?-6bcdk#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -446,6 +458,9 @@ footer{
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mobile:before {
+	content: "\e602";
+}
 .icon-paperplane:before {
 	content: "\e600";
 }
@@ -467,12 +482,6 @@ footer{
 .icon-moon3:before {
 	content: "\e609";
 }
-.icon-new:before {
-	content: "\e603";
-}
-.icon-book:before {
-	content: "\e602";
-}
 .icon-rocket:before {
 	content: "\e611";
 }
@@ -492,6 +501,9 @@ footer{
 	content: "\e615";
 }
 .icon-list:before {
+	content: "\e603";
+}
+.icon-list2:before {
 	content: "\e60e";
 }
 .icon-text:before {
@@ -512,4 +524,3 @@ footer{
 .icon-twitter2:before {
 	content: "\e607";
 }
-
