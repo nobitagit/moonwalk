@@ -138,7 +138,7 @@ li:hover:before{
 	border: 1px solid #3A3F3D;
 	border-radius: 4px;
 	position: relative;
-	margin-left: 10px;
+	margin-left: 20px;
 	padding-left: 10px;
 	width: 200px;
 }
@@ -435,11 +435,11 @@ footer{
 */
 @font-face {
 	font-family: 'icomoon';
-	src:url('../icons/font/icomoon.eot?-6bcdk');
-	src:url('../icons/font/icomoon.eot?#iefix-6bcdk') format('embedded-opentype'),
-		url('../icons/font/icomoon.woff?-6bcdk') format('woff'),
-		url('../icons/font/icomoon.ttf?-6bcdk') format('truetype'),
-		url('../icons/font/icomoon.svg?-6bcdk#icomoon') format('svg');
+	src:url('icomoon.eot?-6bcdk');
+	src:url('icomoon.eot?#iefix-6bcdk') format('embedded-opentype'),
+		url('icomoon.woff?-6bcdk') format('woff'),
+		url('icomoon.ttf?-6bcdk') format('truetype'),
+		url('icomoon.svg?-6bcdk#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
