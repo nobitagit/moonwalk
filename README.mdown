@@ -2,6 +2,8 @@
 
 Moonwalk is a responsive navigation solution that aims to maximise real estate in webapps and websites. It's built to be fast to implement and easy to customise.
 
+See [demo](http://apps.aurelio.me.uk/moonwalk/demo.html):
+
 ## Usage
 
 - Place the moonwalk.css in the head of your document or, even better, import/copy it directly into your own styles.
